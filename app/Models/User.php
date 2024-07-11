@@ -9,6 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use Spatie\Permission\Models\Role;
 use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
@@ -64,4 +65,23 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    /**
+     * Boot the model.
+     *
+     * This method is automatically called when the model is initialized.
+     * It registers a callback that assigns the "user" role to newly created users.
+     *
+     * @return void
+     */
+    public static function boot()
+    {
+        parent::boot();
+
+        static::created(function ($user) {
+            $role = Role::firstOrCreate(['name' => 'user']);
+            $user->roles()->attach($role->id);
+        });
+    }
+
 }
