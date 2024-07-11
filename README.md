@@ -31,8 +31,7 @@ npm run dev
 
 Next, copy the .env file from the example file provided:
 
-```
-bash
+```bash
 cp .env.example .env
 ```
 
