@@ -20,7 +20,7 @@ cd project-name
 composer require laravel/jetstream
 php artisan jetstream:install livewire
 npm install && npm run dev
-php artisan migrate
+php artisan migrate:fresh --seed
 ```
 
 # Laravel Jetstream Project
