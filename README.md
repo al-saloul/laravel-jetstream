@@ -20,8 +20,6 @@ cd laravel-jetstream
 
 composer install
 
-php artisan migrate:fresh --seed
-
 npm install
 
 npm run dev
@@ -42,7 +40,15 @@ Create a new database named laravel_jetstream in your database server. You can u
 CREATE DATABASE laravel_jetstream;
 ```
 
-### 5. Serve the Application
+
+### 5 Execute Migrations
+Execute the following command to migrate the database tables along with their seed data:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+### 6. Serve the Application
 Finally, start the Laravel development server:
 
 ```bash
