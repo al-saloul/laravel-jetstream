@@ -1,21 +1,8 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
+/* Import Bootstrap CSS file */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+/* Import custom style.css file */
 @import 'style.css';
 
+/* Import Boxicons CSS (assuming it's a CSS file) */
 @import 'boxicons';
-
-
-/* @import '../node_modules/boxicons/css/boxicons.min.css'; */
-
-/* @import '../../node_modules/boxicons/css/boxicons.min.css'; */
-
-/* @import 'boxicons/css/boxicons.min.css'; */
-
-
-/* [x-cloak] {
-    display: none;
-} */
