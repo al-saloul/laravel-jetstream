@@ -1,4 +1,4 @@
-# Laravel Project Setup
+# Laravel Jetstream Project
 
 This project is a Laravel-based system that utilizes Jetstream for authentication and includes two-step authentication, user roles, Bootstrap with Blade templates, and is built using Laravel Mix instead of Vite. Below are the details of the setup and the steps to recreate the project.
 
@@ -9,21 +9,6 @@ This project is a Laravel-based system that utilizes Jetstream for authenticatio
 4. Bootstrap and Blade templates
 5. Laravel Mix for asset compilation
 
-## Step-by-Step Setup Process
-
-### 1. Install Laravel with Jetstream
-Begin by creating a new Laravel project and installing Jetstream:
-
-```bash
-composer create-project laravel/laravel project-name
-cd project-name
-composer require laravel/jetstream
-php artisan jetstream:install livewire
-npm install && npm run dev
-php artisan migrate:fresh --seed
-```
-
-# Laravel Jetstream Project
 
 ## Setup and Installation
 
@@ -34,6 +19,8 @@ git clone https://github.com/al-saloul/laravel-jetstream.git
 cd laravel-jetstream
 
 composer install
+
+php artisan migrate:fresh --seed
 
 npm install
 
