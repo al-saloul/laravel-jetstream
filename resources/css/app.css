@@ -1,7 +1,21 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-[x-cloak] {
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import 'style.css';
+
+@import 'boxicons';
+
+
+/* @import '../node_modules/boxicons/css/boxicons.min.css'; */
+
+/* @import '../../node_modules/boxicons/css/boxicons.min.css'; */
+
+/* @import 'boxicons/css/boxicons.min.css'; */
+
+
+/* [x-cloak] {
     display: none;
-}
+} */

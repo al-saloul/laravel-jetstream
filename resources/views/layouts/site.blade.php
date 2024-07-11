@@ -26,9 +26,6 @@
     <!-- ======= Header ======= -->
     <x-navbar />
 
-    <!-- ======= Sidebar ======= -->
-    <x-sidebar/>
-
     <main id="main" class="main">
         {{ $slot }}
     </main><!-- End #main -->

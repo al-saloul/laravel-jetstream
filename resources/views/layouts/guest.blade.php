@@ -20,7 +20,7 @@
         @livewireStyles
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="font-sans text-dark antialiased" style="max-width: 600px; margin: 0 auto;">
             {{ $slot }}
         </div>
 

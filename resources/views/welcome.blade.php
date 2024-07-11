@@ -1,29 +1,27 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
+<x-site-layout>
     <style>
-        .text-center {
-            text-align: center;
+        @media (min-width: 1200px) {
+
+            #main,
+            #footer {
+                margin-left: 0;
+            }
         }
+        
     </style>
-</head>
+    <div></div>
+    <div class="container mt-2">
+        @auth
+        <h2>
+            Welcome,
+            <span>{{ auth()->user()->name }}</span>
+            . You have logged in via
+            <span>{{ auth()->user()->roles->pluck('name')[0] ?? ''  }}</span>
+            role
+        </h2>
+        <hr>
+        @endauth
 
-<body class="font-sans antialiased">
-    <x-navbar />
-
-    <div class="container mt-5">
         <h1>Laravel Project Setup</h1>
         <p>This project is built using Laravel with Jetstream and includes the following features:</p>
 
@@ -68,13 +66,4 @@
             </li>
         </ul>
     </div>
-
-
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-</body>
-
-</html>
+</x-site-layout>
